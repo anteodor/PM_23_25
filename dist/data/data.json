@@ -1,0 +1,91 @@
+{
+    "name": "GARY T. WALTON",
+    "position": "Graphic & Web Designer",
+    "about_me": {
+        "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "quote": "\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"",
+        "contact": {
+            "phone": "+1-718-310-5658",
+            "website": "www.yourwebsite.com",
+            "address": "769 Prudence Street Lincoln Park, MI 48146"
+      }
+    },
+    "references": [
+      {
+        "name": "Darwin B. Magana",
+        "address": "2839 Shoe Lane Marcos, CA",
+        "phone": "+1-970-533-3393",
+        "email": "www.yourwebsite.com"
+      },
+      {
+        "name": "Robert J. Belvin",
+        "address": "2119 Fairfax Drive Newark, NJ",
+        "phone": "+1-908-973-5083",
+        "email": "www.yourwebsite.com"
+      }
+    ],
+    "job_experience": [
+      {
+        "company": "Creative Agency",
+        "location": "Chicago",
+        "position": "Senior Web Designer",
+        "dates": "2021 - Present",
+        "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      },
+      {
+        "company": "Creative Market",
+        "location": "United Kingdom",
+        "position": "Graphic Designer",
+        "dates": "2018 - 2021",
+        "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      },
+      {
+        "company": "Marketing Agency",
+        "location": "United Kingdom",
+        "position": "Marketing Manager",
+        "dates": "2016 - 2018",
+        "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      },
+      {
+        "company": "Creative Market",
+        "location": "Chicago",
+        "position": "Junior Web Designer",
+        "dates": "2013 - 2016",
+        "description": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+      }
+    ],
+    "education": [
+      {
+        "institution": "Stanford University",
+        "degree": "Master Degree",
+        "dates": "2011 - 2013",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      },
+      {
+        "institution": "Chicago University",
+        "degree": "Bachelor Degree",
+        "dates": "2007 - 2011",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+      }
+    ],
+    "skills": [
+        {"name": "Adobe Photoshop", "score":"90%"},
+        {"name": "Adobe Illustrator", "score":"85%"},
+        {"name": "Microsoft Word", "score":"80%"},
+        {"name": "Microsoft Powerpoint", "score":"85%"},
+        {"name": "HTML5/CSS3", "score":"75%"}
+    ],
+    "hobbies": [
+        {"name": "Book Reading", "score":"90%"},
+        {"name": "Travelling", "score":"85%"},
+        {"name": "Playing Chess", "score":"80%"},
+        {"name": "Painting", "score":"85%"},
+        {"name": "Graphic Design", "score":"75%"}
+    ],
+    "languages": [
+        {"name": "English", "score":"95%"},
+        {"name": "German", "score":"60%"},
+        {"name": "Spanish", "score":"45%"}
+    ]
+}
+  

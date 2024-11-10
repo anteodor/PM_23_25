@@ -35,6 +35,15 @@ h4 {
   background-color: #333;
 }
 
+.img_border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc0a0a;
+  width: 320px;
+  height: 490px;
+}
+
 .place-text {
   font-family: "Raleway", serif;
   font-style: italic;

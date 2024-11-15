@@ -34,8 +34,8 @@ h4 {
   align-items: center;
   justify-content: center;
   background-color: #dc0a0a;
-  width: 320px;
-  height: 490px;
+  width: 358px;
+  height: 548px;
 }
 .place-text{
   font-family: 'Raleway', serif;
@@ -76,14 +76,14 @@ h4 {
 } 
 .profile-name{
   font-family: 'Raleway';
-  font-size: 70px;
+  font-size: 86px;
   font-weight: 900;
   text-transform: uppercase;
   color: #333;
 } 
 .profile-surname{
   font-family: 'Raleway';
-  font-size: 70px;
+  font-size: 85px;
   font-weight: 500;
   text-transform: uppercase;
   margin-top: -20px;
@@ -92,17 +92,17 @@ h4 {
 .position-title {
   font-family: 'Raleway';
   padding-bottom: 2px;
-  font-size: 21px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin-top: -20px;
+  margin-top: -15px;
   color: #dc0a0a;
   }
 .line_under_position{
   width: 100%;
-  margin-top: -10px;
-  margin-bottom: 20px;
+  margin-top: -15px;
+  margin-bottom: 30px;
   height: 2px;
   background-color: #333;
 } 
@@ -161,11 +161,13 @@ h4 {
   position: relative;
   width: 300px;
   }
+  
 .container-item {
   display: flex;
   position: relative;
   margin-bottom: 15px;
   }
+
 .line {
   position: absolute;
   width: 1.5px;
@@ -176,6 +178,18 @@ h4 {
   background-color: rgb(50, 50, 50);
   z-index: 1;
   } 
+.container-item:not(:last-child) .line {
+    height: 98%;
+}
+.references-container .container-item:last-child .line {
+    height: 68%;
+}
+.job-container .container-item:last-child .line {
+  height: 77%;
+}
+.education-container .container-item:last-child .line {
+  height: 82%;
+}
 .square {
   width: 11px;
   height: 11px;
@@ -246,39 +260,40 @@ h4 {
   position: relative;
 }
 .languages-container {
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   margin-top: 30px;
 }
 .box {
-  display: flex;
+  display:inline-block;
   position: relative;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: -1.5px;
 }
 .box .percent {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   position: relative;
 }
 .box .percent svg {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
   position: relative;
   transform: rotate(-90deg);
 }
 .box .percent svg circle {
-  width: 80px;
-  height: 80px;
+  width: 120px;
+  height: 120px;
   fill: none;
-  stroke-width: 6;
+  stroke-width: 7;
   stroke: #dc0a0a;
-  stroke-dasharray: 251;
-  stroke-dashoffset: 251;
+  stroke-dasharray: 314;
+  stroke-dashoffset: 314;
   stroke-linecap: round;
-  transform:translate(5px,5px);
 }
 .box .percent svg circle:nth-child(1) {
   stroke-dashoffset: 0;
@@ -299,22 +314,31 @@ h4 {
 .box .percent .num h1 {
   font-family: 'Raleway';
   font-weight: 900;
-  font-size: 22px;
+  font-size: 26px;
   color:#333;
 }
 .box .percent .num h2 span {
   font-family: 'Raleway';
   font-weight: 900;
-  font-size: 22px;
+  font-size: 26px;
   color:#333;
 }
 .box .text {
   font-family: 'Raleway';
   font-weight: 700;
-  font-size: 10.5px;
+  font-size: 12px;
   text-transform: uppercase;
   padding-top: 5px;
   margin-top: -10px;
   margin-bottom: 2px;
   color:#333;
+}
+/* Змінюємо колір незаповненої стрілочки */
+.bi-caret-up-square, 
+.bi-caret-down-square {
+    color: #dc0a0a; /* Встановлюємо червоний колір для незаповнених стрілочок */
+}
+.btn:hover .bi-caret-up-square-fill, 
+.btn:hover .bi-caret-down-square-fill {
+    color: #dc0a0a;; /* Зміна кольору на червоний при наведенні на заповнену іконку */
 }

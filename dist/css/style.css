@@ -1,7 +1,7 @@
-@charset "UTF-8";
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-color: white;
@@ -10,6 +10,7 @@ body {
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .row {
@@ -38,85 +39,86 @@ h4 {
 
 .img_border {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: #dc0a0a;
   width: 358px;
   height: 548px;
 }
 
 .place-text {
-  font-family: "Raleway", serif;
-  font-style: italic;
+  font-family: "Raleway";
   font-weight: 700;
   font-size: 15px;
   color: #333;
+  font-style: italic;
 }
 
 .degree-text {
   font-family: "Raleway";
-  font-size: 18px;
   font-weight: 800;
+  font-size: 18px;
   color: #333;
+  font-style: normal;
 }
 
 .location-text {
-  font-family: "Raleway", serif;
-  font-style: italic;
+  font-family: "Raleway";
   font-weight: 500;
   font-size: 13px;
   color: #333;
+  font-style: italic;
 }
 
 .description {
   font-family: "Raleway";
   font-weight: 500;
   font-size: 16px;
-  text-align: justify;
   color: #333;
+  font-style: normal;
+  text-align: justify;
 }
 
 .name_block {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
-
-.name-title {
+.name_block .name-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-
-.profile-name {
+.name_block .name-title .profile-name {
   font-family: "Raleway";
-  font-size: 86px;
   font-weight: 900;
-  text-transform: uppercase;
+  font-size: 86px;
   color: #333;
+  font-style: normal;
+  text-transform: uppercase;
 }
-
-.profile-surname {
+.name_block .name-title .profile-surname {
   font-family: "Raleway";
-  font-size: 85px;
   font-weight: 500;
+  font-size: 85px;
+  color: #333;
+  font-style: normal;
   text-transform: uppercase;
   margin-top: -20px;
-  color: #333;
 }
-
-.position-title {
+.name_block .position-title {
   font-family: "Raleway";
-  padding-bottom: 2px;
-  font-size: 24px;
   font-weight: 500;
+  font-size: 24px;
+  color: #dc0a0a;
+  font-style: normal;
+  padding-bottom: 2px;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: -15px;
-  color: #dc0a0a;
 }
-
-.line_under_position {
+.name_block .line_under_position {
   width: 100%;
   margin-top: -15px;
   margin-bottom: 30px;
@@ -128,17 +130,18 @@ h4 {
   font-family: "Raleway";
   font-weight: 500;
   font-size: 16px;
-  text-align: justify;
   color: #333;
+  font-style: normal;
+  text-align: justify;
 }
 
 .about-quote-text {
   font-family: "Raleway";
-  font-style: italic;
   font-weight: 900;
   font-size: 16px;
-  text-align: justify;
   color: #333;
+  font-style: italic;
+  text-align: justify;
 }
 
 .contact-container {
@@ -146,19 +149,18 @@ h4 {
   padding: 0;
   margin: 0;
 }
-
 .contact-container li {
+  font-family: "Raleway";
+  font-weight: bold;
+  font-size: 15px;
+  color: #333;
+  font-style: italic;
   display: flex;
   position: relative;
   align-items: center;
   margin-bottom: 10px;
   padding-left: 40px;
-  font-family: "Raleway";
-  font-style: italic;
-  font-weight: bold;
-  color: #333;
 }
-
 .contact-container li::before {
   content: "";
   position: absolute;
@@ -168,8 +170,7 @@ h4 {
   top: 0;
   background-color: #000;
 }
-
-.contact-container i {
+.contact-container li i {
   position: absolute;
   margin-right: 10px;
   left: 0;
@@ -234,48 +235,53 @@ h4 {
 
 .date_location {
   display: flex;
+  justify-content: center;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
 .dates {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 12px;
+  color: white;
+  font-style: normal;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 120px;
   height: 25px;
-  font-size: 11px;
-  font-weight: bold;
-  color: white;
   background-color: #dc0a0a;
 }
 
-.skill-container {
+.hobbies-container,
+.skills-container {
   width: 100%;
 }
-
-.skill {
+.hobbies-container .skill,
+.skills-container .skill {
   margin: 20px 0;
   position: relative;
 }
-
-.skill-text {
+.hobbies-container .skill .skill-text,
+.skills-container .skill .skill-text {
   font-family: "Raleway";
-  font-size: 13px;
   font-weight: 800;
-  margin-bottom: 7px;
+  font-size: 13px;
   color: #333;
+  font-style: normal;
+  margin-bottom: 7px;
 }
-
-.skill-bar {
+.hobbies-container .skill .skill-bar,
+.skills-container .skill .skill-bar {
   width: 100%;
   background-color: #e0e0e0;
   height: 8px;
   position: relative;
 }
-
-.skill-score {
+.hobbies-container .skill .skill-bar .skill-score,
+.skills-container .skill .skill-bar .skill-score {
   height: 8px;
   background-color: #dc0a0a;
   position: absolute;
@@ -285,8 +291,8 @@ h4 {
   align-items: center;
   justify-content: flex-end;
 }
-
-.skill-score::after {
+.hobbies-container .skill .skill-bar .skill-score::after,
+.skills-container .skill .skill-bar .skill-score::after {
   content: "";
   width: 15px;
   height: 15px;
@@ -301,8 +307,7 @@ h4 {
   flex-wrap: nowrap;
   margin-top: 30px;
 }
-
-.box {
+.languages-container .box {
   display: inline-block;
   position: relative;
   justify-content: center;
@@ -310,21 +315,18 @@ h4 {
   flex-direction: column;
   margin: -1.5px;
 }
-
-.box .percent {
+.languages-container .box .percent {
   width: 120px;
   height: 120px;
   position: relative;
 }
-
-.box .percent svg {
+.languages-container .box .percent svg {
   width: 120px;
   height: 120px;
   position: relative;
   transform: rotate(-90deg);
 }
-
-.box .percent svg circle {
+.languages-container .box .percent svg circle {
   width: 120px;
   height: 120px;
   fill: none;
@@ -334,57 +336,54 @@ h4 {
   stroke-dashoffset: 314;
   stroke-linecap: round;
 }
-
-.box .percent svg circle:nth-child(1) {
+.languages-container .box .percent svg circle:nth-child(1) {
   stroke-dashoffset: 0;
   stroke: #cdcdcd;
 }
-
-.box .percent .num {
+.languages-container .box .percent .num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: #111;
 }
-
-.box .percent .num h1 {
+.languages-container .box .percent .num h1 {
   font-family: "Raleway";
   font-weight: 900;
   font-size: 26px;
   color: #333;
+  font-style: normal;
 }
-
-.box .percent .num h2 span {
+.languages-container .box .percent .num h2 span {
   font-family: "Raleway";
   font-weight: 900;
   font-size: 26px;
   color: #333;
+  font-style: normal;
 }
-
-.box .text {
+.languages-container .box .text {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 12px;
+  color: #333;
+  font-style: normal;
   text-transform: uppercase;
   padding-top: 5px;
   margin-top: -10px;
   margin-bottom: 2px;
-  color: #333;
 }
 
-/* Змінюємо колір незаповненої стрілочки */
 .bi-caret-up-square,
 .bi-caret-down-square {
-  color: #dc0a0a; /* Встановлюємо червоний колір для незаповнених стрілочок */
+  color: #dc0a0a;
 }
 
 .btn:hover .bi-caret-up-square-fill,
 .btn:hover .bi-caret-down-square-fill {
-  color: #dc0a0a; /* Зміна кольору на червоний при наведенні на заповнену іконку */
+  color: #dc0a0a;
 }

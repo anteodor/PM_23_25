@@ -34,9 +34,9 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="square"></div>
             <div class="container-information" style="line-height: 10px;">
               <h4 class="degree-text">${ref.name}</h4>
-              <p class="place-text"><span style="color: #dc0a0a; font-weight: 800;">${ref.address}</span></p>
-              <p class="description">Tel: ${ref.phone}</p>
-              <p class="description">Email: ${ref.email}</p>
+              <p class="ref-contact-location">${ref.address}</p>
+              <p class="ref-contact-text">Tel: ${ref.phone}</p>
+              <p class="ref-contact-text">Email: ${ref.email}</p>
             </div> 
           </div>
         `;
@@ -51,12 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="square"></div>
             <div class="container-information">
               <p class="place-text">${job.company}</p>
-              <p class="location-text" style="margin-top:-18px">${job.location}</p>
-              <div class="date_location" style="margin-top:-22px">
+              <p class="location-text" style="margin-top:-20px">${job.location}</p>
+              <div class="date_location" style="margin-top:-28px">
                 <h4 class="degree-text job_position">${job.position}</h4>
                 <p class="dates">${job.dates}</p>
               </div>
-              <p class="description experience_text">${job.description}</p>
+              <p class="description experience_text" style="margin-top:-25px">${job.description}</p>
             </div>
           </div>
         `;
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
             <div class="square"></div>
             <div class="container-information">
               <p class="place-text">${edu.institution}</p>
-              <h4 class="degree-text" style="margin-top: -16px">${edu.degree}</h4>
+              <h4 class="degree-text" style="margin-top: -18px">${edu.degree}</h4>
               <p class="dates">${edu.dates}</p>
               <div class="container-main-information">
                 <p class="description">${edu.description}</p>

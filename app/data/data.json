@@ -8,7 +8,7 @@
         "contact": {
             "phone": "+1-718-310-5588",
             "website": "www.yourwebsite.com",
-            "address": "769 Prudence Street Lincoln Park, MI 48146"
+            "address": "769 Prudence Street Lincoln <br>Park, MI 48146"
       }
     },
     "references": [
@@ -70,18 +70,18 @@
       }
     ],
     "skills": [
-        {"name": "Adobe Photoshop", "score":"90%"},
-        {"name": "Adobe Illustrator", "score":"85%"},
-        {"name": "Microsoft Word", "score":"80%"},
-        {"name": "Microsoft Powerpoint", "score":"85%"},
-        {"name": "HTML-S/CSS-3", "score":"75%"}
+        {"name": "Adobe Photoshop", "score":"80%"},
+        {"name": "Adobe Illustrator", "score":"65%"},
+        {"name": "Microsoft Word", "score":"78%"},
+        {"name": "Microsoft Powerpoint", "score":"68%"},
+        {"name": "HTML-S/CSS-3", "score":"74%"}
     ],
     "hobbies": [
-        {"name": "Book Reading", "score":"90%"},
-        {"name": "Travelling", "score":"85%"},
-        {"name": "Playing Chess", "score":"80%"},
-        {"name": "Painting", "score":"85%"},
-        {"name": "Graphic Design", "score":"75%"}
+        {"name": "Book Reading", "score":"80%"},
+        {"name": "Travelling", "score":"65%"},
+        {"name": "Playing Chess", "score":"78%"},
+        {"name": "Painting", "score":"68%"},
+        {"name": "Graphic Design", "score":"74%"}
     ],
     "languages": [
         {"name": "English", "score":"95%"},

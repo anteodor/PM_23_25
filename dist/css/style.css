@@ -18,6 +18,10 @@ body {
   justify-content: center;
 }
 
+.container-spacing {
+  margin-bottom: 70px;
+}
+
 h4 {
   text-transform: uppercase;
   color: #4e4e4e;
@@ -25,14 +29,15 @@ h4 {
 
 .title {
   font-family: "Raleway";
+  font-size: 35px;
   font-weight: 800;
-  margin-top: 40px;
+  margin-top: 16px;
 }
 
 .line_under_title {
   width: 100%;
   margin-top: -5px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   height: 1.4px;
   background-color: #333;
 }
@@ -42,14 +47,14 @@ h4 {
   justify-content: center;
   align-items: center;
   background-color: #dc0a0a;
-  width: 358px;
-  height: 548px;
+  width: 405px;
+  height: 615px;
 }
 
 .place-text {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 15px;
+  font-size: 22px;
   color: #333;
   font-style: italic;
 }
@@ -57,15 +62,15 @@ h4 {
 .degree-text {
   font-family: "Raleway";
   font-weight: 800;
-  font-size: 18px;
+  font-size: 25px;
   color: #333;
   font-style: normal;
 }
 
 .location-text {
   font-family: "Raleway";
-  font-weight: 500;
-  font-size: 13px;
+  font-weight: 600;
+  font-size: 16px;
   color: #333;
   font-style: italic;
 }
@@ -73,10 +78,26 @@ h4 {
 .description {
   font-family: "Raleway";
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   color: #333;
   font-style: normal;
   text-align: justify;
+}
+
+.ref-contact-location {
+  font-family: "Raleway";
+  font-weight: 800;
+  font-size: 18px;
+  color: #dc0a0a;
+  font-style: italic;
+}
+
+.ref-contact-text {
+  font-family: "Raleway";
+  font-weight: 500;
+  font-size: 17px;
+  color: #333;
+  font-style: normal;
 }
 
 .name_block {
@@ -93,35 +114,35 @@ h4 {
 .name_block .name-title .profile-name {
   font-family: "Raleway";
   font-weight: 900;
-  font-size: 86px;
+  font-size: 92px;
   color: #333;
   font-style: normal;
   text-transform: uppercase;
 }
 .name_block .name-title .profile-surname {
   font-family: "Raleway";
-  font-weight: 500;
-  font-size: 85px;
+  font-weight: 400;
+  font-size: 92px;
   color: #333;
   font-style: normal;
   text-transform: uppercase;
-  margin-top: -20px;
+  margin-top: -35px;
 }
 .name_block .position-title {
   font-family: "Raleway";
   font-weight: 500;
-  font-size: 24px;
+  font-size: 25px;
   color: #dc0a0a;
   font-style: normal;
   padding-bottom: 2px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
-  margin-top: -15px;
+  margin-top: -25px;
 }
 .name_block .line_under_position {
   width: 100%;
   margin-top: -15px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   height: 2px;
   background-color: #333;
 }
@@ -129,7 +150,7 @@ h4 {
 .about-main-text {
   font-family: "Raleway";
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   color: #333;
   font-style: normal;
   text-align: justify;
@@ -138,10 +159,11 @@ h4 {
 .about-quote-text {
   font-family: "Raleway";
   font-weight: 900;
-  font-size: 16px;
+  font-size: 20px;
   color: #333;
   font-style: italic;
   text-align: justify;
+  margin-bottom: 25px;
 }
 
 .contact-container {
@@ -151,57 +173,75 @@ h4 {
 }
 .contact-container li {
   font-family: "Raleway";
-  font-weight: bold;
-  font-size: 15px;
+  font-weight: 700;
+  font-size: 18px;
   color: #333;
   font-style: italic;
   display: flex;
   position: relative;
   align-items: center;
-  margin-bottom: 10px;
-  padding-left: 40px;
+  margin-bottom: 15px;
+  padding-left: 45px;
 }
 .contact-container li::before {
   content: "";
   position: absolute;
   height: 100%;
   width: 1px;
-  left: 25px;
+  left: 30px;
   top: 0;
-  background-color: #000;
+  background-color: rgb(60, 60, 60);
 }
 .contact-container li i {
   position: absolute;
   margin-right: 10px;
   left: 0;
-  font-size: 15px;
+  font-size: 18px;
   color: #dc0a0a;
+}
+.contact-container li:last-child {
+  line-height: 1.2;
+  margin-top: -5px;
+}
+.contact-container li:last-child::before {
+  height: 28px;
+  transform: translateY(50%);
+  margin-top: -5px;
 }
 
 .references-container {
   position: relative;
-  width: 300px;
+  width: 100%;
 }
 
 .container-item {
   display: flex;
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.square {
+  width: 16px;
+  height: 14px;
+  margin-right: 19px;
+  margin-top: 5px;
+  background-color: #dc0a0a;
+  z-index: 2;
 }
 
 .line {
   position: absolute;
-  width: 1.5px;
-  height: 98%;
-  left: 4px;
-  top: 20px;
+  width: 2px;
+  height: 100%;
+  left: 6px;
+  top: 22px;
   bottom: 0;
-  background-color: rgb(50, 50, 50);
+  background-color: rgb(60, 60, 60);
   z-index: 1;
 }
 
 .container-item:not(:last-child) .line {
-  height: 98%;
+  height: 100%;
 }
 
 .references-container .container-item:last-child .line {
@@ -209,20 +249,11 @@ h4 {
 }
 
 .job-container .container-item:last-child .line {
-  height: 77%;
+  height: 81%;
 }
 
 .education-container .container-item:last-child .line {
-  height: 82%;
-}
-
-.square {
-  width: 11px;
-  height: 11px;
-  margin-right: 10px;
-  margin-top: 5px;
-  background-color: #dc0a0a;
-  z-index: 2;
+  height: 85%;
 }
 
 .container-information {
@@ -243,15 +274,16 @@ h4 {
 
 .dates {
   font-family: "Raleway";
-  font-weight: 800;
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 15px;
   color: white;
   font-style: normal;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
   width: 120px;
-  height: 25px;
+  height: 30px;
   background-color: #dc0a0a;
 }
 
@@ -261,28 +293,28 @@ h4 {
 }
 .hobbies-container .skill,
 .skills-container .skill {
-  margin: 20px 0;
+  margin: 25px 0;
   position: relative;
 }
 .hobbies-container .skill .skill-text,
 .skills-container .skill .skill-text {
   font-family: "Raleway";
   font-weight: 800;
-  font-size: 13px;
+  font-size: 18px;
   color: #333;
   font-style: normal;
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 }
 .hobbies-container .skill .skill-bar,
 .skills-container .skill .skill-bar {
   width: 100%;
   background-color: #e0e0e0;
-  height: 8px;
+  height: 10px;
   position: relative;
 }
 .hobbies-container .skill .skill-bar .skill-score,
 .skills-container .skill .skill-bar .skill-score {
-  height: 8px;
+  height: 10px;
   background-color: #dc0a0a;
   position: absolute;
   top: 0;
@@ -294,8 +326,8 @@ h4 {
 .hobbies-container .skill .skill-bar .skill-score::after,
 .skills-container .skill .skill-bar .skill-score::after {
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 19px;
+  height: 19px;
   background-color: #dc0a0a;
   position: relative;
 }
@@ -369,7 +401,7 @@ h4 {
 .languages-container .box .text {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   color: #333;
   font-style: normal;
   text-transform: uppercase;

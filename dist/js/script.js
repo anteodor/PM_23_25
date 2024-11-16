@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded",function(){function t(e,t){e=e.quer
             <div class="square"></div>
             <div class="container-information" style="line-height: 10px;">
               <h4 class="degree-text">${e.name}</h4>
-              <p class="place-text"><span style="color: #dc0a0a; font-weight: 800;">${e.address}</span></p>
-              <p class="description">Tel: ${e.phone}</p>
-              <p class="description">Email: ${e.email}</p>
+              <p class="ref-contact-location">${e.address}</p>
+              <p class="ref-contact-text">Tel: ${e.phone}</p>
+              <p class="ref-contact-text">Email: ${e.email}</p>
             </div> 
           </div>
         `}),document.querySelector(".job-container")),n=(o.job_experience.forEach(e=>{i.innerHTML+=`
@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded",function(){function t(e,t){e=e.quer
             <div class="square"></div>
             <div class="container-information">
               <p class="place-text">${e.company}</p>
-              <p class="location-text" style="margin-top:-18px">${e.location}</p>
-              <div class="date_location" style="margin-top:-22px">
+              <p class="location-text" style="margin-top:-20px">${e.location}</p>
+              <div class="date_location" style="margin-top:-28px">
                 <h4 class="degree-text job_position">${e.position}</h4>
                 <p class="dates">${e.dates}</p>
               </div>
-              <p class="description experience_text">${e.description}</p>
+              <p class="description experience_text" style="margin-top:-25px">${e.description}</p>
             </div>
           </div>
         `}),document.querySelector(".education-container")),s=(o.education.forEach(e=>{n.innerHTML+=`
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded",function(){function t(e,t){e=e.quer
             <div class="square"></div>
             <div class="container-information">
               <p class="place-text">${e.institution}</p>
-              <h4 class="degree-text" style="margin-top: -16px">${e.degree}</h4>
+              <h4 class="degree-text" style="margin-top: -18px">${e.degree}</h4>
               <p class="dates">${e.dates}</p>
               <div class="container-main-information">
                 <p class="description">${e.description}</p>

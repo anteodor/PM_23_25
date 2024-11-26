@@ -1,10 +1,22 @@
+$primary-color: #dc0a0a;
+$secondary-color: #333;
+$neutral-color: #e0e0e0;
+$text-color: #4e4e4e;
+$white: #fff;
+
+$font-family-primary: 'Raleway';
+$font-size-small: 13px;
+$font-size-medium: 18px;
+$font-size-large: 26px;
+$font-size-xl: 92px;
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@mixin text-style($font-weight, $font-size, $color, $font-style: normal, $font-family: 'Raleway') {
+@mixin text-style($font-weight, $font-size, $color, $font-style: normal, $font-family: $font-family-primary) {
   font-family: $font-family;
   font-weight: $font-weight;
   font-size: $font-size;
@@ -17,7 +29,7 @@ body {
   @include flex-center;
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: $white;
 }
 
 .container {
@@ -35,11 +47,11 @@ body {
 
 h4 {
   text-transform: uppercase;
-  color: #4e4e4e;
+  color: $text-color;
 }
 
 .title{
-  font-family: 'Raleway';
+  font-family: $font-family-primary;
   font-size: 35px; 
   font-weight: 800;
   margin-top: 16px;
@@ -50,39 +62,39 @@ h4 {
   margin-top: -5px;
   margin-bottom: 50px;
   height: 1.4px;
-  background-color: #333;
+  background-color: $secondary-color;
 }
 
 .img_border {
   @include flex-center;
-  background-color: #dc0a0a;
+  background-color: $primary-color;
   width: 405px;
   height: 615px;
 }
 
 .place-text {
-  @include text-style(700, 22px, #333, italic);
+  @include text-style(700, 22px, $secondary-color, italic);
 }
 
 .degree-text {
-  @include text-style(800, 25px, #333);
+  @include text-style(800, 25px, $secondary-color);
 }
 
 .location-text {
-  @include text-style(600, 16px, #333, italic);
+  @include text-style(600, 16px, $secondary-color, italic);
 }
 
 .description{
-  @include text-style(500, 20px, #333);
+  @include text-style(500, 20px, $secondary-color);
   text-align: justify;
 }
 
 .ref-contact-location{
-  @include text-style(800, 18px, #dc0a0a, italic);
+  @include text-style(800, $font-size-medium, $primary-color, italic);
 }
 
 .ref-contact-text{
-  @include text-style(500, 17px, #333);
+  @include text-style(500, 17px, $secondary-color);
 }
 
 .name_block {
@@ -95,19 +107,19 @@ h4 {
     align-items: flex-start;
 
     .profile-name {
-      @include text-style(900, 92px, #333);
+      @include text-style(900, $font-size-xl, $secondary-color);
       text-transform: uppercase;
     }
 
     .profile-surname {
-      @include text-style(400, 92px, #333);
+      @include text-style(400, $font-size-xl, $secondary-color);
       text-transform: uppercase;
       margin-top: -35px;
     }
   }
 
   .position-title {
-    @include text-style(500, 25px, #dc0a0a);
+    @include text-style(500, 25px, $primary-color);
     padding-bottom: 2px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -119,17 +131,17 @@ h4 {
     margin-top: -15px;
     margin-bottom: 60px;
     height: 2px;
-    background-color: #333;
+    background-color: $secondary-color;
   }
 }
 
 .about-main-text{
-  @include text-style(500, 20px, #333);
+  @include text-style(500, 20px, $secondary-color);
   text-align: justify;
 }
 
 .about-quote-text{
-  @include text-style(900, 20px, #333, italic);
+  @include text-style(900, 20px, $secondary-color, italic);
   text-align: justify;
   margin-bottom: 25px;
 }
@@ -140,7 +152,7 @@ h4 {
   margin: 0;
 
   li {
-    @include text-style(700, 18px, #333, italic);
+    @include text-style(700, $font-size-medium, $secondary-color, italic);
     display: flex;
     position: relative;
     align-items: center;
@@ -161,8 +173,8 @@ h4 {
       position: absolute;
       margin-right: 10px;
       left: 0;
-      font-size: 18px;
-      color: #dc0a0a;
+      font-size: $font-size-medium;
+      color: $primary-color;
     }
   }
 
@@ -194,7 +206,7 @@ h4 {
   height: 14px;
   margin-right: 19px;
   margin-top: 5px;
-  background-color: #dc0a0a;
+  background-color: $primary-color;
   z-index: 2;
 }
 
@@ -239,14 +251,14 @@ h4 {
 }
 
 .dates {
-  @include text-style(700, 15px, white);
+  @include text-style(700, 15px, $white);
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
   width: 120px;
   height: 30px;
-  background-color: #dc0a0a;
+  background-color: $primary-color;
 }
 
 .hobbies-container,
@@ -258,19 +270,19 @@ h4 {
     position: relative;
 
     .skill-text {
-      @include text-style(800, 18px, #333);
+      @include text-style(800, $font-size-medium, $secondary-color);
       margin-bottom: 10px;
     }
 
     .skill-bar {
       width: 100%;
-      background-color: #e0e0e0;
+      background-color: $neutral-color;
       height: 10px;
       position: relative;
 
       .skill-score {
         height: 10px;
-        background-color: #dc0a0a;
+        background-color: $primary-color;
         position: absolute;
         top: 0;
         left: 0;
@@ -282,7 +294,7 @@ h4 {
           content: '';
           width: 19px;
           height: 19px;
-          background-color: #dc0a0a;
+          background-color: $primary-color;
           position: relative;
         }
       }
@@ -321,7 +333,7 @@ h4 {
           height: 120px;
           fill: none;
           stroke-width: 7;
-          stroke: #dc0a0a;
+          stroke: $primary-color;
           stroke-dasharray: 314;
           stroke-dashoffset: 314;
           stroke-linecap: round;
@@ -344,17 +356,17 @@ h4 {
         color: #111;
 
         h1 {
-          @include text-style(900, 26px, #333);
+          @include text-style(900, $font-size-large, $secondary-color);
         }
 
         h2 span {
-          @include text-style(900, 26px, #333);
+          @include text-style(900, $font-size-large, $secondary-color);
         }
       }
     }
 
     .text {
-      @include text-style(700, 13px, #333);
+      @include text-style(700, $font-size-small, $secondary-color);
       text-transform: uppercase;
       padding-top: 5px;
       margin-top: -10px;
@@ -365,10 +377,10 @@ h4 {
 
 .bi-caret-up-square, 
 .bi-caret-down-square {
-  color: #dc0a0a; 
+  color: $primary-color; 
 }
 
 .btn:hover .bi-caret-up-square-fill, 
 .btn:hover .bi-caret-down-square-fill {
-  color: #dc0a0a;; 
+  color: $primary-color;; 
 }

@@ -51,8 +51,10 @@ gulp.task('json', function () {
 gulp.task('serve', function () {
     browserSync.init({
         server: {
-            baseDir: './dist'
-        }
+            baseDir: './dist',
+        },
+        port: 8080, // Встановлюємо порт 8080
+        open: true, 
     });
 
     // Відстеження змін у файлах

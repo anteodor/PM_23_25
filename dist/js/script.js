@@ -1,85 +1,16 @@
-document.addEventListener("DOMContentLoaded",function(){function t(e,t){e=e.querySelector("i");t?(e.classList.contains("bi-caret-up-square")&&(e.classList.remove("bi-caret-up-square"),e.classList.add("bi-caret-up-square-fill")),e.classList.contains("bi-caret-down-square")&&(e.classList.remove("bi-caret-down-square"),e.classList.add("bi-caret-down-square-fill"))):(e.classList.contains("bi-caret-up-square-fill")&&(e.classList.remove("bi-caret-up-square-fill"),e.classList.add("bi-caret-up-square")),e.classList.contains("bi-caret-down-square-fill")&&(e.classList.remove("bi-caret-down-square-fill"),e.classList.add("bi-caret-down-square")))}(async()=>{try{var e=await fetch("data/data.json");if(!e.ok)throw new Error("HTTP error! Status: "+e.status);var o=await e.json(),r=(document.querySelector(".profile-name").textContent=o.name,document.querySelector(".profile-surname").textContent=o.surname,document.querySelector(".position-title").textContent=o.position,document.querySelector(".about-main-text").textContent=o.about_me.text,document.querySelector(".about-quote-text").textContent=o.about_me.quote,o.about_me.contact);document.querySelector(".contact-container").innerHTML=`
-        <li style="font-weight: 800"><i class="bi bi-telephone-fill"></i>${r.phone}</li>
-        <li><i class="bi bi-globe"></i>${r.website}</li>
-        <li><i class="bi bi-geo-alt-fill"></i>${r.address}</li>
-      `;let t=document.querySelector(".references-container"),i=(o.references.forEach(e=>{t.innerHTML+=`
-          <div class="container-item">
-            <div class="line"></div>
-            <div class="square"></div>
-            <div class="container-information" style="line-height: 10px;">
-              <h4 class="degree-text">${e.name}</h4>
-              <p class="ref-contact-location">${e.address}</p>
-              <p class="ref-contact-text">Tel: ${e.phone}</p>
-              <p class="ref-contact-text">Email: ${e.email}</p>
-            </div> 
-          </div>
-        `}),document.querySelector(".job-container")),n=(o.job_experience.forEach(e=>{i.innerHTML+=`
-          <div class="container-item">
-            <div class="line"></div>
-            <div class="square"></div>
-            <div class="container-information">
-              <p class="place-text">${e.company}</p>
-              <p class="location-text" style="margin-top:-20px">${e.location}</p>
-              <div class="date_location" style="margin-top:-28px">
-                <h4 class="degree-text job_position">${e.position}</h4>
-                <p class="dates">${e.dates}</p>
-              </div>
-              <p class="description experience_text" style="margin-top:-25px">${e.description}</p>
-            </div>
-          </div>
-        `}),document.querySelector(".education-container")),s=(o.education.forEach(e=>{n.innerHTML+=`
-          <div class="container-item">
-            <div class="line"></div>
-            <div class="square"></div>
-            <div class="container-information">
-              <p class="place-text">${e.institution}</p>
-              <h4 class="degree-text" style="margin-top: -18px">${e.degree}</h4>
-              <p class="dates">${e.dates}</p>
-              <div class="container-main-information">
-                <p class="description">${e.description}</p>
-              </div>
-            </div>
-          </div>
-        `}),document.querySelector(".skills-container")),a=(o.skills.forEach(e=>{s.innerHTML+=`
-          <div class="skill">
-            <p class="skill-text">${e.name}</p>
-            <div class="skill-bar">
-              <div class="skill-score" style="width: ${e.score}"></div>
-            </div>
-          </div>
-        `}),document.querySelector(".hobbies-container")),c=(o.hobbies.forEach(e=>{a.innerHTML+=`
-          <div class="skill">
-            <p class="skill-text">${e.name}</p>
-            <div class="skill-bar">
-              <div class="skill-score" style="width: ${e.score}"></div>
-            </div>
-          </div>
-        `}),document.querySelector(".languages-container"));o.languages.forEach(e=>{var t=parseInt(e.score),t=`
-          <div class="box">
-            <div class="percent">
-              <svg>
-                <circle cx="60" cy="60" r="50"></circle>
-                <circle cx="60" cy="60" r="50" style="stroke-dashoffset: calc(314 - (314 * ${t}) / 100);"></circle>
-              </svg>
-              <div class="num">
-                <h1>${t}<span>%</span></h1>
-                <h2 class="text">${e.name}</h2>
-              </div>
-            </div>
-          </div>
-        `;c.innerHTML+=t})}catch(e){console.error("Error fetching data:",e)}})();[{containerSelector:".about_me",titleSelector:".title",containerIndex:0},{containerSelector:".references-container",titleSelector:".title",containerIndex:1},{containerSelector:".job-container",titleSelector:".title",containerIndex:2},{containerSelector:".education-container",titleSelector:".title",containerIndex:3},{containerSelector:".skills-container",titleSelector:".title",containerIndex:4},{containerSelector:".hobbies-container",titleSelector:".title",containerIndex:5},{containerSelector:".languages-container",titleSelector:".title",containerIndex:6}].forEach(e=>{let n=document.querySelectorAll(e.containerSelector)[0];e=document.querySelectorAll(e.titleSelector)[e.containerIndex];if(n&&e){n.style.display="none";let i=document.createElement("button");i.classList.add("btn","custom-button","btn-sm","ms-2"),i.style.cssText=`
-        background-color: #fffff;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        padding: 2px 6px;
-        cursor: pointer;
-        font-size: 20px;
-        transition: background-color 0.3s;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
-        margin-bottom: 4px;
-      `,e.style.cssText=`
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      `,i.innerHTML='<i class="bi bi-caret-up-square"></i>',e.appendChild(i),i.addEventListener("click",function(){var e,t;e=i,"none"===(t=n).style.display?(t.style.display="block",e.innerHTML='<i class="bi bi-caret-down-square-fill"></i>'):(t.style.display="none",e.innerHTML='<i class="bi bi-caret-up-square-fill"></i>')}),i.addEventListener("mouseover",function(){t(i,!0)}),i.addEventListener("mouseout",function(){t(i,!1)})}})});
+document.addEventListener("DOMContentLoaded",function(){function t(e,t){e=e.children[0];t?(e.classList.contains("bi-caret-up-square")&&(e.classList.remove("bi-caret-up-square"),e.classList.add("bi-caret-up-square-fill")),e.classList.contains("bi-caret-down-square")&&(e.classList.remove("bi-caret-down-square"),e.classList.add("bi-caret-down-square-fill"))):(e.classList.contains("bi-caret-up-square-fill")&&(e.classList.remove("bi-caret-up-square-fill"),e.classList.add("bi-caret-up-square")),e.classList.contains("bi-caret-down-square-fill")&&(e.classList.remove("bi-caret-down-square-fill"),e.classList.add("bi-caret-down-square")))}(async()=>{try{var e=await fetch("http://localhost:8081/data/data.json");if(!e.ok)throw new Error("HTTP error! Status: "+e.status);var t=await e.json(),n=(document.getElementById("name").textContent=t.name,document.getElementById("surname").textContent=t.surname,document.getElementById("position").textContent=t.position,document.getElementById("about-main-text").textContent=t.about_me.text,document.getElementById("about-quote-text").textContent=t.about_me.quote,t.about_me.contact),a=document.getElementById("contact-container"),r=(a.innerHTML="",document.createElement("li")),m=(r.style.fontWeight="800",r.innerHTML='<i class="bi bi-telephone-fill"></i> '+n.phone,a.appendChild(r),document.createElement("li")),p=(m.innerHTML=`<i class="bi bi-globe"></i> <a href="http://${n.website}" target="_blank">${n.website}</a>`,a.appendChild(m),document.createElement("li"));p.innerHTML='<i class="bi bi-geo-alt-fill"></i> '+n.address,a.appendChild(p);let d=document.getElementById("references-container"),i=(d.innerHTML="",t.references.forEach(e=>{var t=document.createElement("div"),n=(t.classList.add("container-item"),document.createElement("div")),n=(n.classList.add("line"),t.appendChild(n),document.createElement("div")),n=(n.classList.add("square"),t.appendChild(n),document.createElement("div")),a=(n.classList.add("container-information"),n.style.lineHeight="10px",document.createElement("h4")),a=(a.classList.add("degree-text"),a.textContent=e.name,n.appendChild(a),document.createElement("p")),a=(a.classList.add("ref-contact-location"),a.textContent=e.address,n.appendChild(a),document.createElement("p")),a=(a.classList.add("ref-contact-text"),a.textContent="Tel: "+e.phone,n.appendChild(a),document.createElement("p"));a.classList.add("ref-contact-text"),a.textContent="Email: "+e.email,n.appendChild(a),t.appendChild(n),d.appendChild(t)}),document.getElementById("job-container")),s=(i.innerHTML="",t.job_experience.forEach(e=>{var t=document.createElement("div"),n=(t.classList.add("container-item"),document.createElement("div")),n=(n.classList.add("line"),t.appendChild(n),document.createElement("div")),n=(n.classList.add("square"),t.appendChild(n),document.createElement("div")),a=(n.classList.add("container-information"),document.createElement("p")),a=(a.classList.add("place-text"),a.textContent=e.company,n.appendChild(a),document.createElement("p")),a=(a.classList.add("location-text"),a.style.marginTop="-20px",a.textContent=e.location,n.appendChild(a),document.createElement("div")),d=(a.classList.add("date_location"),a.style.marginTop="-28px",document.createElement("h4")),d=(d.classList.add("degree-text","job_position"),d.textContent=e.position,a.appendChild(d),document.createElement("p")),d=(d.classList.add("dates"),d.textContent=e.dates,a.appendChild(d),n.appendChild(a),document.createElement("p"));d.classList.add("description","experience_text"),d.style.marginTop="-25px",d.textContent=e.description,n.appendChild(d),t.appendChild(n),i.appendChild(t)}),document.getElementById("education-container")),c=(s.innerHTML="",t.education.forEach(e=>{var t=document.createElement("div"),n=(t.classList.add("container-item"),document.createElement("div")),n=(n.classList.add("line"),t.appendChild(n),document.createElement("div")),n=(n.classList.add("square"),t.appendChild(n),document.createElement("div")),a=(n.classList.add("container-information"),document.createElement("p")),a=(a.classList.add("place-text"),a.textContent=e.institution,n.appendChild(a),document.createElement("h4")),a=(a.classList.add("degree-text"),a.style.marginTop="-18px",a.textContent=e.degree,n.appendChild(a),document.createElement("p")),a=(a.classList.add("dates"),a.textContent=e.dates,n.appendChild(a),document.createElement("div")),d=(a.classList.add("container-main-information"),document.createElement("p"));d.classList.add("description"),d.textContent=e.description,a.appendChild(d),n.appendChild(a),t.appendChild(n),s.appendChild(t)}),document.getElementById("skills-container")),l=(c.innerHTML="",t.skills.forEach(e=>{var t=document.createElement("div"),n=(t.classList.add("skill"),document.createElement("p")),n=(n.classList.add("skill-text"),n.textContent=e.name,t.appendChild(n),document.createElement("div")),a=(n.classList.add("skill-bar"),document.createElement("div"));a.classList.add("skill-score"),a.style.width=e.score,n.appendChild(a),t.appendChild(n),c.appendChild(t)}),document.getElementById("hobbies-container")),o=(l.innerHTML="",t.hobbies.forEach(e=>{var t=document.createElement("div"),n=(t.classList.add("skill"),document.createElement("p")),n=(n.classList.add("skill-text"),n.textContent=e.name,t.appendChild(n),document.createElement("div")),a=(n.classList.add("skill-bar"),document.createElement("div"));a.classList.add("skill-score"),a.style.width=e.score,n.appendChild(a),t.appendChild(n),l.appendChild(t)}),document.getElementById("languages-container"));o.innerHTML="",t.languages.forEach(e=>{var t=parseInt(e.score),n=document.createElement("div"),a=(n.classList.add("box"),document.createElement("div")),d=(a.classList.add("percent"),document.createElementNS("http://www.w3.org/2000/svg","svg")),i=document.createElementNS("http://www.w3.org/2000/svg","circle"),s=(i.setAttribute("cx","60"),i.setAttribute("cy","60"),i.setAttribute("r","50"),document.createElementNS("http://www.w3.org/2000/svg","circle")),i=(s.setAttribute("cx","60"),s.setAttribute("cy","60"),s.setAttribute("r","50"),s.style.strokeDashoffset=`calc(314 - (314 * ${t}) / 100)`,d.appendChild(i),d.appendChild(s),a.appendChild(d),document.createElement("div")),s=(i.classList.add("num"),document.createElement("h1")),d=(s.innerHTML=t+"<span>%</span>",i.appendChild(s),document.createElement("h2"));d.classList.add("text"),d.textContent=e.name,i.appendChild(d),a.appendChild(i),n.appendChild(a),o.appendChild(n)})}catch(e){console.error("Error fetching data:",e)}})();[{containerId:"about_me",titleId:"about-me-title",containerIndex:0},{containerId:"references-container",titleId:"references-title",containerIndex:1},{containerId:"job-container",titleId:"job-title",containerIndex:2},{containerId:"education-container",titleId:"education-title",containerIndex:3},{containerId:"skills-container",titleId:"skills-title",containerIndex:4},{containerId:"hobbies-container",titleId:"hobbies-title",containerIndex:5},{containerId:"languages-container",titleId:"languages-title",containerIndex:6}].forEach(e=>{let a=document.getElementById(e.containerId);e=document.getElementById(e.titleId);if(a&&e){a.style.display="none";let n=document.createElement("button");n.classList.add("btn","custom-button","btn-sm","ms-2"),n.style.cssText=`
+      background-color: #fffff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 2px 6px;
+      cursor: pointer;
+      font-size: 20px;
+      transition: background-color 0.3s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+      margin-bottom: 4px;
+    `,e.style.cssText=`
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    `,n.innerHTML='<i class="bi bi-caret-up-square"></i>',e.appendChild(n),n.addEventListener("click",function(){var e,t;e=n,"none"===(t=a).style.display?(t.style.display="block",e.innerHTML='<i class="bi bi-caret-down-square-fill"></i>'):(t.style.display="none",e.innerHTML='<i class="bi bi-caret-up-square-fill"></i>')}),n.addEventListener("mouseover",function(){t(n,!0)}),n.addEventListener("mouseout",function(){t(n,!1)})}})});

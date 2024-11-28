@@ -106,19 +106,19 @@ h4 {
     flex-direction: column;
     align-items: flex-start;
 
-    .profile-name {
+    h1#name {
       @include text-style(900, $font-size-xl, $secondary-color);
       text-transform: uppercase;
     }
 
-    .profile-surname {
+    h2#surname {
       @include text-style(400, $font-size-xl, $secondary-color);
       text-transform: uppercase;
       margin-top: -35px;
     }
   }
 
-  .position-title {
+  p#position {
     @include text-style(500, 25px, $primary-color);
     padding-bottom: 2px;
     letter-spacing: 3px;
@@ -135,18 +135,18 @@ h4 {
   }
 }
 
-.about-main-text{
+p#about-main-text{
   @include text-style(500, 20px, $secondary-color);
   text-align: justify;
 }
 
-.about-quote-text{
+blockquote#about-quote-text{
   @include text-style(900, 20px, $secondary-color, italic);
   text-align: justify;
   margin-bottom: 25px;
 }
 
-.contact-container {
+ul#contact-container {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -224,15 +224,15 @@ h4 {
 .container-item:not(:last-child) .line {
   height: 100%;
 }
-.references-container .container-item:last-child .line {
+div#references-container .container-item:last-child .line {
   height: 68%;
 }
 
-.job-container .container-item:last-child .line {
+div#job-container .container-item:last-child .line {
   height: 81%;
 }
 
-.education-container .container-item:last-child .line {
+div#education-container .container-item:last-child .line {
   height: 85%;
 }
 
@@ -261,8 +261,8 @@ h4 {
   background-color: $primary-color;
 }
 
-.hobbies-container,
-.skills-container {
+div#hobbies-container,
+div#skills-container {
   width: 100%;
   
   .skill {
@@ -302,7 +302,7 @@ h4 {
   }
 }
 
-.languages-container {
+div#languages-container {
   display: block;
   justify-content: space-between;
   align-items: center;
